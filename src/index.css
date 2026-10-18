@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+.filter-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #a87b40 #f7f5f1;
+}
+
+.filter-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.filter-scrollbar::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #faf9f7 0%, #f1eee8 100%);
+  border-radius: 999px;
+  margin-block: 8px;
+}
+
+.filter-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c59b63 0%, #a87b40 100%);
+  border: 2px solid #f7f5f1;
+  border-radius: 999px;
+  min-height: 36px;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 28%), 0 1px 3px rgb(18 19 22 / 14%);
+}
+
+.filter-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b98749 0%, #8f6738 100%);
+}
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+}
+
+/* Custom styling for luxury touch */
+.bg-radial-gradient {
+  background-radial: radial-gradient(circle at top center, rgba(197, 155, 99, 0.08), transparent 70%);
+}
+
+/* Hide scrollbar for gallery thumbnails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
