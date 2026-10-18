@@ -180,14 +180,14 @@ export const PropertiesPage: React.FC = () => {
             {/* Mobile Filter Toggle */}
             <button
               onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
-              className="lg:hidden flex items-center gap-2 whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-zinc-50 hover:bg-zinc-100"
+              className="lg:hidden flex min-h-[42px] items-center gap-2 whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-zinc-50 hover:bg-zinc-100"
             >
               <SlidersHorizontal className="w-3.5 h-3.5 text-[#C59B63]" />
               <span>{language === 'FR' ? 'Filtres' : 'Filters'}</span>
             </button>
 
             {/* Results Count */}
-            <span className="min-w-0 text-center sm:text-left text-xs font-semibold text-zinc-500 whitespace-nowrap">
+            <span className="flex min-h-[42px] min-w-0 items-center justify-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-2.5 text-center text-[11px] font-medium text-zinc-500 whitespace-nowrap sm:text-left sm:text-xs">
               <strong className="text-zinc-900">{sortedProperties.length}</strong> {t('properties.found')}
             </span>
 
