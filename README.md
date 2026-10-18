@@ -1,24 +1,41 @@
 # NESTORA
 
-Luxury real estate listings in Tunisia.
+A responsive real estate website showcasing properties for sale and rent in Tunisia.
 
-## Requirements
+**Live website:** [https://saifeddinedev.github.io/nestora-portfolio/](https://saifeddinedev.github.io/nestora-portfolio/)
 
-- Node.js 20 or newer
-- npm
+## About
+
+NESTORA is a real estate portfolio website designed to help visitors explore properties across Tunisia. It features property search, filters, sorting, favorites, and detailed property pages in English and French.
+
+## Features
+
+- Browse properties for sale and rent
+- Search by keyword and filter listings by location, property type, price, and other criteria
+- Sort property results
+- View property details, images, and contact information
+- Save properties to favorites
+- Switch between English and French
+- Responsive layouts for desktop and mobile
+- GitHub Pages deployment with GitHub Actions
+
+## Built with
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Lucide React
 
 ## Run locally
 
-```bash
-npm install
-npm run dev
-```
+### Requirements
 
-Open the local address printed by Vite in your browser.
+- Node.js 22.12 or newer
+- npm
 
-## Production build
+### Install dependencies
 
 ```bash
-npm run build
-npm run preview
-```
+npm ci
