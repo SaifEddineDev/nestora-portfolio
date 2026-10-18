@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, MessageSquare, ChevronDown } from 'lucide-react';
 import { SectionTitle } from '../components/SectionTitle';
+import { FilterSelect } from '../components/FilterPanel';
 import { useLanguage } from '../context/LanguageContext';
 
 export const ContactPage: React.FC = () => {
@@ -196,17 +197,17 @@ export const ContactPage: React.FC = () => {
                     <label className="block text-xs font-semibold text-zinc-700 mb-1">
                       {language === 'FR' ? 'Objet de la demande' : 'Subject of Inquiry'}
                     </label>
-                    <select
+                    <FilterSelect
                       value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full text-xs font-medium rounded-xl border border-zinc-200 px-3.5 py-2.5 bg-zinc-50/50 hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#C59B63]/40"
-                    >
-                      <option value="Buying a Property">{language === 'FR' ? 'Projet d’Achat' : 'Buying a Property'}</option>
-                      <option value="Renting a Property">{language === 'FR' ? 'Location Résidentielle' : 'Renting a Property'}</option>
-                      <option value="Listing / Selling">{language === 'FR' ? 'Vendre / Déposer un Bien' : 'Selling / Listing with Nestora'}</option>
-                      <option value="Valuation">{language === 'FR' ? 'Estimation Patrimoniale' : 'Property Valuation'}</option>
-                      <option value="General Inquiry">{language === 'FR' ? 'Autre demande' : 'General Inquiry'}</option>
-                    </select>
+                      onChange={(subject) => setFormData({ ...formData, subject })}
+                      options={[
+                        { value: 'Buying a Property', label: language === 'FR' ? 'Projet d’achat' : 'Buying a Property' },
+                        { value: 'Renting a Property', label: language === 'FR' ? 'Location résidentielle' : 'Renting a Property' },
+                        { value: 'Listing / Selling', label: language === 'FR' ? 'Vendre / déposer un bien' : 'Selling / Listing with Nestora' },
+                        { value: 'Valuation', label: language === 'FR' ? 'Estimation patrimoniale' : 'Property Valuation' },
+                        { value: 'General Inquiry', label: language === 'FR' ? 'Autre demande' : 'General Inquiry' },
+                      ]}
+                    />
                   </div>
                 </div>
 
