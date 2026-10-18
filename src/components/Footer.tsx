@@ -10,9 +10,9 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#121316] text-white pt-20 pb-12 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-zinc-800/80">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pb-16 border-b border-zinc-800/80 sm:gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand Col */}
-          <div className="lg:col-span-2 space-y-5">
+          <div className="col-span-2 space-y-5 lg:col-span-2">
             <Link to="/" aria-label="NESTORA Accueil">
               <Logo variant="light" size="lg" />
             </Link>
@@ -125,7 +125,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Contact Details */}
-          <div className="space-y-4">
+          <div className="col-span-2 space-y-4 lg:col-span-1">
             <h4 className="text-xs uppercase tracking-[0.2em] font-semibold text-[#C59B63]">
               {t('footer.contact')}
             </h4>
