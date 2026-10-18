@@ -44,10 +44,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   return (
     <div
-      className={`bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-white/50 ${className}`}
+      className={`bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3 sm:p-6 shadow-[0_18px_44px_-16px_rgba(0,0,0,0.3)] sm:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-white/70 ring-1 ring-black/5 ${className}`}
     >
       {/* Transaction Toggle Buy / Rent */}
-      <div className="flex items-center gap-2 mb-4 pb-4 border-b border-zinc-100">
+      <div className="flex items-center gap-2 mb-3 pb-3 sm:mb-4 sm:pb-4 border-b border-zinc-100">
         <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 hidden sm:inline">
           {t('hero.lookingFor')}:
         </span>
@@ -78,10 +78,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       </div>
 
       {/* Inputs Form */}
-      <form onSubmit={handleSearch} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <form onSubmit={handleSearch} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {/* Location Dropdown */}
-        <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-zinc-600 flex items-center gap-1.5">
+        <div className="space-y-1 sm:space-y-1.5">
+          <label className="text-[11px] sm:text-xs font-semibold text-zinc-600 flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5 text-[#C59B63]" />
             <span>{t('hero.location')}</span>
           </label>
@@ -97,8 +97,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         </div>
 
         {/* Property Type Dropdown */}
-        <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-zinc-600 flex items-center gap-1.5">
+        <div className="space-y-1 sm:space-y-1.5">
+          <label className="text-[11px] sm:text-xs font-semibold text-zinc-600 flex items-center gap-1.5">
             <Home className="w-3.5 h-3.5 text-[#C59B63]" />
             <span>{t('hero.propertyType')}</span>
           </label>
@@ -114,8 +114,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         </div>
 
         {/* Price Inputs (Min / Max) */}
-        <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-zinc-600 flex items-center gap-1.5">
+        <div className="space-y-1 sm:space-y-1.5">
+          <label className="text-[11px] sm:text-xs font-semibold text-zinc-600 flex items-center gap-1.5">
             <Banknote className="w-3.5 h-3.5 text-[#C59B63]" />
             <span>{t('hero.price')}</span>
           </label>
@@ -141,7 +141,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         <div className="flex items-end">
           <button
             type="submit"
-            className="w-full py-3.5 px-6 rounded-xl bg-[#121316] hover:bg-[#252830] active:scale-[0.99] text-white font-medium text-sm flex items-center justify-center gap-2 transition-all shadow-md group"
+            className="w-full py-3 sm:py-3.5 px-6 rounded-xl bg-[#121316] hover:bg-[#252830] active:scale-[0.99] text-white font-medium text-sm flex items-center justify-center gap-2 transition-all shadow-md group"
           >
             <Search className="w-4 h-4 text-[#C59B63] transition-transform group-hover:scale-110" />
             <span className="font-semibold tracking-wide">{t('hero.search')}</span>
