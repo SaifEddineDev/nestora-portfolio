@@ -24,13 +24,13 @@ export const Logo: React.FC<LogoProps> = ({
 
   const titleSizes = {
     sm: 'text-lg tracking-[0.22em]',
-    md: 'text-2xl tracking-[0.22em]',
+    md: 'text-2xl tracking-[0.22em] max-sm:text-xl max-sm:tracking-[0.16em]',
     lg: 'text-3xl tracking-[0.24em]',
   };
 
   const subtitleSizes = {
     sm: 'text-[7.5px] tracking-[0.3em]',
-    md: 'text-[9.5px] tracking-[0.32em]',
+    md: 'text-[9.5px] tracking-[0.32em] max-sm:text-[7px] max-sm:tracking-[0.14em]',
     lg: 'text-[11px] tracking-[0.36em]',
   };
 
@@ -141,7 +141,7 @@ export const Logo: React.FC<LogoProps> = ({
 
         <div className="flex items-center gap-1 mt-1">
           <span
-            className={`font-sans font-medium uppercase ${subtitleSizes[size]} transition-colors duration-300 ${
+            className={`font-sans font-medium uppercase whitespace-nowrap ${subtitleSizes[size]} transition-colors duration-300 ${
               isLight ? 'text-zinc-300/90' : 'text-zinc-500'
             }`}
           >
