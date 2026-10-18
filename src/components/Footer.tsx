@@ -151,14 +151,14 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
           <p>© 2026 NESTORA. {t('footer.rights')}</p>
-          <div className="flex items-center gap-6">
-            <span className="hover:text-zinc-300 transition-colors cursor-pointer">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:flex-nowrap">
+            <span className="whitespace-nowrap hover:text-zinc-300 transition-colors cursor-pointer">
               Privacy Policy
             </span>
-            <span className="hover:text-zinc-300 transition-colors cursor-pointer">
+            <span className="whitespace-nowrap hover:text-zinc-300 transition-colors cursor-pointer">
               Terms of Service
             </span>
-            <span className="hover:text-zinc-300 transition-colors cursor-pointer">
+            <span className="basis-full text-center whitespace-nowrap hover:text-zinc-300 transition-colors cursor-pointer sm:basis-auto">
               Tunis · Gammarth · La Marsa · Sidi Bou Said
             </span>
           </div>
