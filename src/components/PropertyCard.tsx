@@ -29,6 +29,9 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, className 
           src={property.images[0]}
           alt={displayTitle}
           loading="lazy"
+          onError={(event) => {
+            event.currentTarget.style.display = 'none';
+          }}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
         />
 

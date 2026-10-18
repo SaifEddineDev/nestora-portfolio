@@ -449,7 +449,7 @@ export const propertiesData: Property[] = [
     descriptionFr: 'Résidence moderne et raffinée au Lac 1 avec service de conciergerie 24/7. Faïences italiennes, thermostats connectés, isolation phonique renforcée et suite parentale avec dressing sur-mesure.',
     highlights: ['Concierge Service', 'Walk-in Dressing', 'Quiet Residential Compound', 'Near Embassies'],
     images: [
-      'https://images.unsplash.com/photo-1502005229762-ee1b2b93e3e3?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80',
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
     ],
