@@ -95,9 +95,9 @@ export const HomePage: React.FC = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
           {/* Top Tagline Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-xs uppercase tracking-[0.2em] font-medium mb-6 animate-in fade-in slide-in-from-bottom-3 duration-500">
-            <Sparkles className="w-3.5 h-3.5 text-[#C59B63]" />
-            <span>Tunisia’s Premier Real Estate Agency</span>
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-[9px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] font-medium mb-6 animate-in fade-in slide-in-from-bottom-3 duration-500">
+            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 text-[#C59B63]" />
+            <span className="whitespace-nowrap">Tunisia’s Premier Real Estate Agency</span>
           </div>
 
           {/* Headline */}
