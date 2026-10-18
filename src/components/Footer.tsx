@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#121316] text-white pt-20 pb-12 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pb-16 border-b border-zinc-800/80 sm:gap-12 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)] gap-x-2 gap-y-10 pb-16 border-b border-zinc-800/80 sm:grid-cols-2 sm:gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand Col */}
           <div className="col-span-2 space-y-5 lg:col-span-2">
             <Link to="/" aria-label="NESTORA Accueil">
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/properties?type=Apartment" className="whitespace-nowrap text-xs transition-colors hover:text-white sm:text-sm">
+                <Link to="/properties?type=Apartment" className="whitespace-nowrap text-sm transition-colors hover:text-white">
                   Penthouses & Apartments
                 </Link>
               </li>
