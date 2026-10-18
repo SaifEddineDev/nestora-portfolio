@@ -176,27 +176,27 @@ export const PropertiesPage: React.FC = () => {
             />
           </div>
 
-          <div className="flex items-center justify-between w-full md:w-auto gap-3">
+          <div className="grid w-full grid-cols-[auto_minmax(0,1fr)] gap-2 sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-3 md:w-auto">
             {/* Mobile Filter Toggle */}
             <button
               onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
-              className="lg:hidden flex items-center gap-2 px-4 py-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-zinc-50 hover:bg-zinc-100"
+              className="lg:hidden flex items-center gap-2 whitespace-nowrap px-3 sm:px-4 py-2.5 rounded-xl border border-zinc-200 text-xs font-semibold text-zinc-700 bg-zinc-50 hover:bg-zinc-100"
             >
               <SlidersHorizontal className="w-3.5 h-3.5 text-[#C59B63]" />
               <span>{language === 'FR' ? 'Filtres' : 'Filters'}</span>
             </button>
 
             {/* Results Count */}
-            <span className="text-xs font-semibold text-zinc-500 whitespace-nowrap">
+            <span className="min-w-0 text-center sm:text-left text-xs font-semibold text-zinc-500 whitespace-nowrap">
               <strong className="text-zinc-900">{sortedProperties.length}</strong> {t('properties.found')}
             </span>
 
             {/* Sort Dropdown */}
-            <div className="flex items-center gap-2">
+            <div className="col-span-2 flex w-full items-center gap-2 sm:col-span-1 sm:w-auto">
               <label htmlFor="sort-dropdown" className="text-xs text-zinc-500 font-medium hidden sm:inline whitespace-nowrap">
                 {t('properties.sortBy')}:
               </label>
-              <div className="relative w-[212px] max-w-[52vw]" ref={sortMenuRef}>
+              <div className="relative w-full min-w-0 sm:w-[212px] sm:max-w-[52vw]" ref={sortMenuRef}>
                 <button
                   id="sort-dropdown"
                   type="button"
@@ -206,7 +206,7 @@ export const PropertiesPage: React.FC = () => {
                   onKeyDown={(event) => { if (event.key === 'Escape') setSortMenuOpen(false); }}
                   className="w-full flex items-center justify-between text-sm font-medium rounded-2xl border border-zinc-200 pl-4 pr-3 py-3 bg-white hover:border-[#C59B63]/60 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-[#C59B63]/30 focus:border-[#C59B63] text-zinc-800 transition-all"
                 >
-                  <span>{t(`properties.sort${sortOption === 'recommended' ? 'Recommended' : sortOption === 'price-asc' ? 'PriceLow' : sortOption === 'price-desc' ? 'PriceHigh' : sortOption === 'newest' ? 'Newest' : 'Surface'}`)}</span>
+                  <span className="min-w-0 flex-1 truncate text-left">{t(`properties.sort${sortOption === 'recommended' ? 'Recommended' : sortOption === 'price-asc' ? 'PriceLow' : sortOption === 'price-desc' ? 'PriceHigh' : sortOption === 'newest' ? 'Newest' : 'Surface'}`)}</span>
                   <ChevronDown className={`w-4 h-4 text-zinc-500 transition-transform ${sortMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {sortMenuOpen && (
