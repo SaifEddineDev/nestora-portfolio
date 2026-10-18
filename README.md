@@ -39,10 +39,6 @@ NESTORA is a real estate portfolio website designed to help visitors explore pro
 
 ```bash
 npm ci
-### Install dependencies
-
-```bash
-npm ci
 ```
 
 ### Start the development server
