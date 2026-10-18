@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Properties Categories */}
-          <div className="space-y-4">
+          <div className="space-y-4 -translate-x-2 sm:translate-x-0">
             <h4 className="text-xs uppercase tracking-[0.2em] font-semibold text-[#C59B63]">
               {t('footer.properties')}
             </h4>
