@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/properties?type=Apartment" className="hover:text-white transition-colors">
+                <Link to="/properties?type=Apartment" className="whitespace-nowrap text-xs transition-colors hover:text-white sm:text-sm">
                   Penthouses & Apartments
                 </Link>
               </li>
