@@ -54,23 +54,23 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Large Brand Visual Banner */}
-        <div className="relative aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl mb-20 border border-zinc-200">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-zinc-200 shadow-2xl mb-14 sm:aspect-[21/9] sm:rounded-3xl sm:mb-20">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85"
             alt="Nestora Architectural Excellence"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8 text-white flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="absolute bottom-4 left-4 right-4 flex flex-col justify-between gap-2 text-white sm:bottom-8 sm:left-8 sm:right-8 sm:flex-row sm:items-end sm:gap-4">
             <div>
-              <span className="text-xs font-semibold text-[#C59B63] uppercase tracking-wider">
+              <span className="text-[10px] font-semibold text-[#C59B63] uppercase tracking-wider sm:text-xs">
                 Tunisia Coastal Collection
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold">
+              <h3 className="max-w-[22ch] font-serif text-xl font-bold leading-tight sm:max-w-none sm:text-3xl">
                 Carthage · Gammarth · La Marsa · Sidi Bou Said
               </h3>
             </div>
-            <div className="text-xs text-zinc-300 font-light max-w-xs">
+            <div className="max-w-[32ch] text-[11px] font-light leading-snug text-zinc-300 sm:max-w-xs sm:text-xs">
               Curated by local architectural connoisseurs and licensed legal real estate partners.
             </div>
           </div>
