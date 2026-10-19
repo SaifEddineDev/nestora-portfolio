@@ -48,7 +48,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     >
       {/* Transaction Toggle Buy / Rent */}
       <div className="flex items-center gap-2 mb-3 pb-3 sm:mb-4 sm:pb-4 border-b border-zinc-100">
-        <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2 hidden sm:inline">
+        <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mr-2">
           {t('hero.lookingFor')}:
         </span>
         <div className="flex bg-zinc-100/80 p-1 rounded-xl">
