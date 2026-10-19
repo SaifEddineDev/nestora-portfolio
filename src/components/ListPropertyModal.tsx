@@ -71,16 +71,16 @@ export const ListPropertyModal: React.FC<ListPropertyModalProps> = ({ isOpen, on
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-zinc-100 max-h-[90vh] flex flex-col">
         {/* Header */}
-        <div className="p-6 pb-4 border-b border-zinc-100 flex items-center justify-between bg-zinc-50/60">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-[#C59B63]/10 text-[#A87B40] flex items-center justify-center">
+        <div className="relative flex items-start gap-2.5 border-b border-zinc-100 bg-zinc-50/60 p-4 pb-4 sm:p-6 sm:pb-4">
+          <div className="flex min-w-0 flex-1 items-start gap-2.5 sm:items-center">
+            <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#C59B63]/10 text-[#A87B40] sm:mt-0 sm:h-9 sm:w-9">
               <Home className="w-5 h-5" />
             </div>
-            <div>
-              <h3 className="font-serif text-xl font-bold text-zinc-900">
+            <div className="min-w-0 pr-8 sm:pr-0">
+              <h3 className="font-serif text-lg font-bold leading-tight text-zinc-900 sm:text-xl">
                 {language === 'FR' ? 'DÃ©poser votre PropriÃ©tÃ©' : 'List Your Property with NESTORA'}
               </h3>
-              <p className="text-xs text-zinc-500">
+              <p className="mt-1 text-[11px] leading-snug text-zinc-500 sm:text-xs">
                 {language === 'FR'
                   ? 'Nos experts vous accompagnent pour valoriser et commercialiser votre bien.'
                   : 'Let our luxury real estate advisors assist you in positioning and marketing your asset.'}
@@ -89,7 +89,8 @@ export const ListPropertyModal: React.FC<ListPropertyModalProps> = ({ isOpen, on
           </div>
           <button
             onClick={resetAndClose}
-            className="w-8 h-8 rounded-full bg-zinc-200/60 hover:bg-zinc-200 flex items-center justify-center text-zinc-600 transition-colors"
+            aria-label={language === 'FR' ? 'Fermer' : 'Close'}
+            className="absolute right-3 top-3 z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-200/60 text-zinc-600 transition-colors hover:bg-zinc-200 sm:static sm:ml-2"
           >
             <X className="w-4 h-4" />
           </button>
