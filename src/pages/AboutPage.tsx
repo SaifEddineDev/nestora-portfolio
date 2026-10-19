@@ -36,7 +36,7 @@ export const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] pt-28 pb-20">
+    <div className="min-h-screen bg-[#FAFAF9] pt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Editorial Story Header */}
         <div className="py-8 lg:py-16 text-center max-w-4xl mx-auto">
