@@ -1,5 +1,6 @@
 ﻿import React, { useEffect, useRef, useState } from 'react';
 import { X, CheckCircle2, Home, Upload, Sparkles, Image as ImageIcon } from 'lucide-react';
+import { FilterSelect } from './FilterPanel';
 import { useLanguage } from '../context/LanguageContext';
 
 interface ListPropertyModalProps {
@@ -125,31 +126,31 @@ export const ListPropertyModal: React.FC<ListPropertyModalProps> = ({ isOpen, on
                   <label className="block text-xs font-semibold text-zinc-700 mb-1">
                     {language === 'FR' ? 'Type de Transaction' : 'Transaction Type'}
                   </label>
-                  <select
+                  <FilterSelect
                     value={formData.status}
-                    onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                    className="w-full text-sm rounded-xl border border-zinc-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-[#C59B63]/40"
-                  >
-                    <option value="Sale">{language === 'FR' ? 'Vente (Sale)' : 'For Sale'}</option>
-                    <option value="Rent">{language === 'FR' ? 'Location (Rent)' : 'For Rent'}</option>
-                  </select>
+                    onChange={(status) => setFormData({ ...formData, status })}
+                    options={[
+                      { value: 'Sale', label: language === 'FR' ? 'Vente (Sale)' : 'For Sale' },
+                      { value: 'Rent', label: language === 'FR' ? 'Location (Rent)' : 'For Rent' },
+                    ]}
+                  />
                 </div>
 
                 <div>
                   <label className="block text-xs font-semibold text-zinc-700 mb-1">
                     {language === 'FR' ? 'Type de Bien' : 'Property Type'}
                   </label>
-                  <select
+                  <FilterSelect
                     value={formData.type}
-                    onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                    className="w-full text-sm rounded-xl border border-zinc-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-[#C59B63]/40"
-                  >
-                    <option value="Villa">Villa</option>
-                    <option value="Apartment">Apartment</option>
-                    <option value="House">House</option>
-                    <option value="Studio">Studio</option>
-                    <option value="Office">Office</option>
-                  </select>
+                    onChange={(type) => setFormData({ ...formData, type })}
+                    options={[
+                      { value: 'Villa', label: 'Villa' },
+                      { value: 'Apartment', label: 'Apartment' },
+                      { value: 'House', label: 'House' },
+                      { value: 'Studio', label: 'Studio' },
+                      { value: 'Office', label: 'Office' },
+                    ]}
+                  />
                 </div>
               </div>
 
@@ -172,19 +173,19 @@ export const ListPropertyModal: React.FC<ListPropertyModalProps> = ({ isOpen, on
                   <label className="block text-xs font-semibold text-zinc-700 mb-1">
                     {language === 'FR' ? 'Ville' : 'City / Location'}
                   </label>
-                  <select
+                  <FilterSelect
                     value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full text-sm rounded-xl border border-zinc-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-[#C59B63]/40"
-                  >
-                    <option value="Gammarth">Gammarth</option>
-                    <option value="La Marsa">La Marsa</option>
-                    <option value="Carthage">Carthage</option>
-                    <option value="Sidi Bou Said">Sidi Bou Said</option>
-                    <option value="Tunis">Tunis</option>
-                    <option value="Hammamet">Hammamet</option>
-                    <option value="Sousse">Sousse</option>
-                  </select>
+                    onChange={(city) => setFormData({ ...formData, city })}
+                    options={[
+                      { value: 'Gammarth', label: 'Gammarth' },
+                      { value: 'La Marsa', label: 'La Marsa' },
+                      { value: 'Carthage', label: 'Carthage' },
+                      { value: 'Sidi Bou Said', label: 'Sidi Bou Said' },
+                      { value: 'Tunis', label: 'Tunis' },
+                      { value: 'Hammamet', label: 'Hammamet' },
+                      { value: 'Sousse', label: 'Sousse' },
+                    ]}
+                  />
                 </div>
 
                 <div>
